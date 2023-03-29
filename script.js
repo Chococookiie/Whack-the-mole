@@ -75,7 +75,7 @@ const second =secondel.innerText
     else{
         if(second <= 0){
             minuteel.innerText = minute-1 
-            secondel.innerText = 9
+            secondel.innerText = 59
         }
         else
         secondel.innerText = second -1;
