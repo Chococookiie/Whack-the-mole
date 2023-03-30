@@ -13,7 +13,15 @@ proStarter.classList.add('up')
 })
 let score = 0
 
+
 startBtn.addEventListener('click' , () => {
+const checkscoreele = document.querySelector('.display-score')
+
+    if(checkscoreele.classList.contains('see')){
+        checkscoreele.classList.remove('see')
+        checkscoreele.classList.add('hide')
+    }
+    console.log('hi')
      startGame = setInterval(getRandomHole , 1200)
     getRandomHole()
     timer = setInterval(startTimer , 1000)
@@ -35,9 +43,6 @@ function getRandomHole(){
     let index = Math.floor(Math.random() * holes.length)
     console.log(index)
     holes[index].innerHTML = `<img src="images/mollee.png" class="mole show" alt="">`
-
-    // const imgTag = document.getElementsByTagName('img')[0]
-    // imgTag.classList.add('show')
     updateImage()
 }
 
@@ -89,7 +94,6 @@ minuteel.innerText = '02'
 secondel.innerText = '00'
 clearInterval(timer)
 clearInterval(startGame)
-
 updateScore()
 }
 
@@ -97,5 +101,6 @@ function updateScore(){
     finalScore.innerText = score
     score = 0
     scoreel.innerText = score
+    finalScore.classList.remove()
     finalScoreEl.classList.add('see')
 }
