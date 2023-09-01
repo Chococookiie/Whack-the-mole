@@ -146,6 +146,7 @@ display: none;
 
  @media screen and (max-width: 1000px) {
     .start{
+        flex-direction: column;
         top: 8rem;
         width: 90%;
     }
